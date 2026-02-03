@@ -26,8 +26,14 @@ import numpy as np
 
 
 
-df_csv = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data')
+df_csv = pd.read_csv('penguins.csv')
 
+# gets the two first 5 rows in the dataframe
 print(df_csv.head())
-print(df_csv.describe())
-print(df_csv.info())
+
+# gets the shape of the dataframe
+print(df_csv.shape)
+
+# gets the count of unique values in the 'species' column
+print(df_csv['species'].value_counts())
+
